@@ -1,0 +1,161 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital World</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Condensed&family=Teko:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/c8963842c9.js" crossorigin="anonymous"></script>
+</head>
+<body onload="load()">
+    <div id="mainContenitore">
+        <div id="contenitore-1">
+            <div id="mainDiv">
+                <h1 id="txtCentrale" data-aos="zoom-out-down" data-aos-delay="400">Con Noi, Imparerai Tutto Sul<br>Mondo Digitale</h1>
+                <div id="statoC">
+                    <div id="stato">
+                        <a id="stImg" title="Immagini" style="background-color: #F15F79;animation: shadow-pulse 1s infinite;" href="#" onclick="stImg()"></a>
+                        <a id="stSuo"><i title="Suoni" class="fas fa-lock lock" style="color:#F15F79;text-align: center;" href="#" onclick="stSuo()"></i><a>
+                        <a id="stVid"><i title="Video" class="fas fa-lock lock" style="color:#F15F79;text-align: center;" href="#" onclick="stVid()"></i><a> 
+                        <button id="comp" disabled>COMPLETATO!</button>
+                        <p id="rp" style="font-size: 12px;color:white;position: absolute;width: 200px;margin-left: -210px;margin-top: 40px;cursor: pointer;display:none" onclick="rp()">Risetta i progressi</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#suPre" id="scorri" >scorri</a>
+            <div style="animation: opa-1 .5s forwards;animation-delay:1.5s;opacity:0;"> 
+                <i class="fas fa-angle-double-down arrow" data-aos="zoom-in-up"></i>
+            </div>
+        </div>
+        <div id="suPre"></div>
+        <div id="contenitore-2">
+            <div  style="text-align: center; width: 100%;">
+                <h1 id="detaglio" data-aos="fade-up">Più Precisamente</h1>
+            </div>
+            <div id="imgDiv">
+                <div class="imgOver">
+                    <img src="./img/immagine.jpeg" alt="immagine" height="460px" class="imgP" >
+                </div>
+                <div class="imgOver">
+                    <img src="./img/suono.jpg" alt="suono" height="460px" class="imgP" >
+                </div>
+                <div class="imgOver" style="width: 690px;">
+                    <img src="./img/video.jpg" alt="video" height="460px" class="imgP">
+                </div>
+            </div>
+            <div id="imgTxtDiv">
+                <div style="display: inline-block;" data-aos="zoom-out-up" data-aos-delay="100">
+                    <h2 class="imgNumP">01</h2>
+                    <h4 class="imgTxtP">Immagini</h4>
+                </div>
+                <div style="display: inline-block; margin-right: 50;" data-aos="zoom-out-up" data-aos-delay="200">
+                    <h2 class="imgNumP">02</h2>
+                    <h4 class="imgTxtP">Suoni</h4>
+                </div>
+                <div style="display: inline-block;" data-aos="zoom-out-up" data-aos-delay="300">
+                    <h2 class="imgNumP">03</h2>
+                    <h4 class="imgTxtP">Video</h4>
+                </div>
+                <div id="para" data-aos="zoom-out-down" data-aos-delay="450">
+                    <p class="imgParaP">Un'immagine è una<br>rappresentazione visiva,<br>non solida, della realtà.</p>
+                    <p class="imgParaP">Il suono è la sensazione data<br>dalla vibrazione di un corpo<br>in oscillazione.</p>
+                    <p class="imgParaP">Il video è l'informazione elettronica<br>rappresentante immagini che<br>possono variare nel tempo.</p>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute;margin-top: 120px;" id="imgOri"></div>
+        <div id="parallax">
+            <div id="paral-img-par">
+                <div class="p-1-para" style="margin-top: 130px;">
+                    <div style="transform: translateY(490px);margin-left: 400px;position: absolute;">
+                        <p class="statop">Stato:</p> 
+                        <p class="statob" >Sboccato</p>
+                    </div>
+                    <h1 id="titI" data-aos="fade-down">D'immagini faremo</h1>
+                     <ul>
+                         <li data-aos="fade-right" data-aos-delay="50">Raster VS Vettoriali</li>
+                         <li data-aos="fade-right" data-aos-delay="100">La risoluzione</li>
+                         <li data-aos="fade-right" data-aos-delay="150">La profondità di colore</li>
+                         <li data-aos="fade-right" data-aos-delay="200">Dimensioni di un’immagine</li>
+                         <li data-aos="fade-right" data-aos-delay="250">La compressione delle immagini</li>
+                     </ul>
+                 </div>
+                <div id="divparaCon-1">
+                    <div id="parallax-1"> </div>
+                </div>
+            </div>
+            <div style="position: absolute;margin-top: -150px;" id="SuonoOri"></div>
+            <div id="paral-img-par-2">
+                <div class="p-1-para" style="float: left; margin-left: 210px; margin-top: 160px;">
+                    <div style="transform: translateY(460px);margin-left: 420px;position: absolute;">
+                        <p class="statop">Stato:</p> 
+                        <p class="statob" id="sb-2">boccato</p>
+                    </div>
+                    <h1 id="titI" data-aos="fade-down" style="margin-top: -60px;">Dei suoni faremo</h1>
+                     <ul>
+                         <li data-aos="fade-right" data-aos-delay="50">Rappresentare i suoni</li>
+                         <li data-aos="fade-right" data-aos-delay="100">Il Campionamento</li>
+                         <li data-aos="fade-right" data-aos-delay="150">Frequenza di Campionamento</li>
+                         <li data-aos="fade-right" data-aos-delay="200">Dimensione di Campionamento</li>
+                         <li data-aos="fade-right" data-aos-delay="250">Quantizzazione e Codifica</li>
+                         <li data-aos="fade-right" data-aos-delay="300">Spazio Occupato</li>
+                     </ul>
+                 </div>
+                <div id="divparaCon-2">
+                    <div id="parallax-2"> </div>
+                </div>
+            </div>
+            <div id="paral-img-par-3">
+                <div class="p-1-para" style="margin-top: 300px;">
+                    <div style="transform: translateY(450px);margin-left: 250px;position: absolute;">
+                        <p class="statop">Stato:</p> 
+                        <p class="statob" id="sb-3">boccato</p>
+                    </div>
+                    <h1 id="titI" data-aos="fade-down">Dei video faremo</h1>
+                     <ul>
+                         <li data-aos="fade-right" data-aos-delay="50">In Generale</li>
+                         <li data-aos="fade-right" data-aos-delay="100">Caratteristiche</li>
+                         <li data-aos="fade-right" data-aos-delay="150">Container e codec</li>
+                     </ul>
+                 </div>
+                <div id="divparaCon-3">
+                    <div id="parallax-3"> </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer font-small blue mt-5">
+            <div class="footer-copyright text-center py-3 text-white" style="background-color: #F15F79;margin-top: -45px;opacity: 0.8;">© 2020 Copyright:
+              <a href="https://mdbootstrap.com/">Pal's Designs</a>
+            </div> 
+          </footer>
+        <div id="nav">
+            <div id="navContenitore">
+                <h1 id="mainName" data-aos="fade-down-right">Digital World</h1>
+                <div id="tag" data-aos="fade-down-left">
+                    <i class="fas fa-home" ></i>
+                    <a href="#" class="aTags" style="text-decoration: none;" data-aos="fade-left">Home</a>
+                    <i class="fas fa-images" ></i>
+                    <a href="#imgOri" class="aTags" style="text-decoration: none;">Immagini</a>
+                    <i class="fab fa-soundcloud" ></i>
+                    <a href="#SuonoOri" class="aTags" style="text-decoration: none;">Suoni</a>
+                    <i class="fas fa-video"></i>
+                    <a href="#paral-img-par-3" class="aTags" style="text-decoration: none;">Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="errore">
+        <p class="tit-alert">ATTENZIONE</p><br>
+        <p id="paraAlert" ></p>
+        <input type="button" class="btn-alert" value="Ok" onclick="chiudiErr()">
+        <input type="button" id="reset" class="btn-alert" value="Resetta" onclick="resetta()" style="display: none;">
+    </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

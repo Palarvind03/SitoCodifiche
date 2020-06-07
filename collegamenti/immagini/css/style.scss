@@ -1,0 +1,329 @@
+$txtColor: #333333;
+$hovTxtColor:#F15F79;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    outline: none;
+}
+
+
+#contenitore{
+    position: relative;
+    filter: blur(2px);
+    pointer-events:none;
+}
+
+#svg1{
+    margin-top: 620px;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+#tit{
+    font-size: 50px;
+    font-family: 'Teko', sans-serif;
+    padding-left: 1%;
+    padding-top: 1%;
+    position: absolute;
+}
+
+#alert1, #alert-c{
+    border:solid 1px;
+    height: auto;
+    width: 500px;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -1500px;
+    animation: alert-a 1.5s ease-in-out forwards;
+    background-color: #f7f7f7;
+    border: solid 1px white;
+    text-align: center;
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.10);
+    padding: 15px 15px;
+    filter: none;
+    cursor: pointer;
+}
+#alert2{
+    border:solid 1px;
+    height: auto;
+    width: 500px;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -1500px;
+    background-color: #f7f7f7;
+    border: solid 1px white;
+    text-align: center;
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.10);
+    padding: 15px 15px;
+    filter: none;
+    cursor: pointer;
+}
+
+.tit-alert{
+    color: $hovTxtColor;
+    font-size: 30px;
+}
+.para-alert{
+    color: $txtColor;
+}
+
+.btn-alert{
+    float: right;
+    background-color: $hovTxtColor;
+    color: white;
+    padding: 5px 20px;
+    border: solid 1px #f7f7f7;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 25px;
+    cursor: pointer;
+}
+#contenuto{
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+.argo{
+    color: $hovTxtColor;
+    margin-bottom: 2%;
+    font-size: 30px;
+}
+
+.write{
+    font-size: 20px;
+    color: $txtColor;
+}
+
+.smalTit{
+    color:black;
+    font-size: 22px;
+    &::after{
+        content:':';
+        color: $hovTxtColor;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+#mainBtn{
+    float: right;
+    transform: translateY(700px);
+    margin-right: 8%;
+    cursor: pointer;
+}
+
+.Mbtn{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 30px;
+    outline: none;
+    border: solid 1px $hovTxtColor;
+    cursor: pointer;
+    &:hover{
+        background-color: $hovTxtColor;
+        color:white;
+    }
+}
+#ioSono{
+    position: absolute;
+    font-size: 20px;
+    color: $txtColor;
+    transform: translateX(900px);
+    margin-top: -20px;
+}
+
+.shbtn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    animation: shadow-pulse 1s infinite;
+    margin-top: 350px;
+    margin-left: 330px;
+    position: absolute;
+    border: solid 1px;
+    cursor: pointer;
+}
+
+.img{
+    box-shadow: 1px 0px 15px 0px rgba(241,95,121,0.40);
+    animation:"opa-1 1s forwards";
+    border-radius: 0 15px 0 15px;
+}
+
+#triBtn{
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    transform: translateX(690px);
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#dp,#selC, #selL{
+    border: none;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: $txtColor;
+}
+
+.triS{
+    border: solid 1px $hovTxtColor;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color:$txtColor;
+    margin-left: 10px;
+    &:hover{
+        background-color: $hovTxtColor;
+        color: white;
+        transform: scale(1.2);
+    }
+}
+
+.pink{
+    color: $txtColor;
+    font-size: 25px;
+}
+
+.calIpt{
+    height: 40px;
+    border-radius: 20px 0px 20px 0px;
+    display: inline-block;
+    border: solid 1px $hovTxtColor;
+    text-align: center;
+    display: inline-block;
+}
+
+#DivCal{
+    transform: translateX(250px);
+    margin-top: 50px;
+}
+
+#calcola{
+    position: absolute;
+    transform: translateX(290px);
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+#risCal{
+    font-size: 35px;
+    color: $hovTxtColor;
+    display: inline-block;
+    text-align: center;
+    transform: translateY(30px);
+}
+
+.dimensione{
+    font-size: $hovTxtColor;
+    font-size: 15px;
+    opacity: 0;
+    position: absolute;
+    &::first-letter{
+        font-size: 20px;
+    }
+}
+
+.doma{
+    border: solid $txtColor 1px;
+    height: 30px;
+    width: 150px;
+    border-radius: 0px 10px 10px 10px;
+    font-size: 15px;
+}
+
+#risultato{
+    border:solid 1px;
+    height: auto;
+    width: 500px;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    margin-left: 650px;
+    animation: alert-a 1.5s ease-in-out forwards;
+    background-color: #f7f7f7;
+    border: solid 1px white;
+    text-align: center;
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.10);
+    padding: 15px 15px;
+    filter: none;
+    cursor: pointer;
+}
+
+#errore{
+    border:solid 1px;
+    height: auto;
+    width: 500px;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    margin-left: 650px;
+    background-color: #f7f7f7;
+    border: solid 1px white;
+    text-align: center;
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.10);
+    padding: 15px 15px;
+    filter: none;
+    cursor: pointer;
+}
+//animazioni...
+
+@keyframes alert-a{
+    0%{
+         margin-top: -1500px;
+    }
+    100%{
+        margin-top: -800px;
+    }
+}
+@keyframes opa-0{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes opa-1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes shadow-pulse
+{
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+   }
+   100% {
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+   }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital World | video</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Condensed&family=Teko:wght@600&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/c8963842c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contenitore">
+        <div id="tit">La codifica video</div>
+        <div id="contenuto">
+            <div class="page">
+                <div class="argo">In Generale</div>
+                <div class="write">
+                    <div style="padding-left: 5%;">
+                        · Per comprendere il procedimento di rappresentazione digitale di un filmato prendiamo <br> come modello una pellicola cinematografica: <br><br>
+                        <div style="padding-left: 5%;">
+                            ·una sequenza di immagini statiche (fotogrammi) <br>
+                            ·una o più bande per il sonoro.<br><br>
+                        </div>
+                        · L'occhio umano non riesce a percepire come distinte due immagini separate da meno di un trentesimo di secondo. <br><br>
+
+                        · Ogni singolo fotogramma viene digitalizzato utilizzando i procedimenti visti per la rappresentazione delle immagini <br><br>
+    
+                        · La colonna sonora subisce lo stesso processo di conversione che abbiamo incontrato trattando i suoni digitali. <br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Per Fissare Meglio Le idee...</div>
+                <div class="teo">
+                    Ecco una piccolo demo di come siamo passi dalle immagini ai video...<br><br>
+                    <div id="fotogra" style="position: absolute;margin-top: 100px;">
+                        <img src="./img/demo1/fotogrammi1.jpg" alt="fotog" height="120px" id="grafS" >
+                        <img src="./img/demo1/fotogrammi2.jpg" alt="fotog" height="120px" id="grafS" >
+                        <img src="./img/demo1/fotogrammi3.jpg" alt="fotog" height="120px" id="grafS" >
+                        <img src="./img/demo1/fotogrammi4.jpg" alt="fotog" height="120px" id="grafS" >
+                        <p style="margin-top: 20px;color: #F15F79;margin-left: 200px;">FOTOGRAMMI</p>
+                    </div>
+                    <div id="video" style="position: absolute;margin-top:0px;margin-left: 900px;">
+                        <img id="imgVid" src="./img/demo1/fotogrammi1.jpg" alt="video">
+                    </div>
+                    <button onclick="video()" id="start" class="shbtn" style="margin-top: 390px;margin-left: 650px;border-radius: 0px;">Start</button>
+                    <button onclick="Stopvideo()" id="stop" class="shbtn" style="margin-top: 390px;margin-left: 750px;border-radius: 0px;animation: none;">Stop</button>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Caratteristiche</div>
+                <div class="write">
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">Video analogico<p>
+                            <div style="padding-left: 5%;">
+                                Video: il concetto nasce con l’invenzione della televisione.<br>
+                                <div style="padding-left: 5%;">
+                                    ·Risoluzione: espressa in linee <br>
+                                    ·Frequenza:  
+                                    <div style="padding-left: 5%;">
+                                        – pellicola      24fps <br>
+                                        –standard televisivi classici: <br>
+                                            <div style="padding-left: 5%;">
+                                                •PAL 25fps <br>
+                                                •NTSC 30 fps
+                                            </div>
+                                        –Scansione interlacciata.<br><br>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">Video Digitale<p>
+                            <div style="padding-left: 5%;">
+                                Dai nastri a CD e DVD.<br>
+                                <div style="padding-left: 5%;">
+                                    ·Risoluzione (orizzontale e verticale): espressa in pixel<br>
+                                    ·frequenza: espressa in fps <br> 
+                                    ·rapporto d’aspetto: rapporto tra larghezza e altezza di un’immagine <br>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Container E Codec</div>
+                <div class="write">
+                    <br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit" >Container<p>
+                            <div style="padding-left: 5%;">
+                                contenitore che contiene al suo interno  audio e video del filmato 
+                                <div style="padding-left: 5%;">
+                                    ·Il container dà l’estensione al file <br>
+                                </div>
+                            </div>
+                    </div>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit" >Codec<p>
+                            <div style="padding-left: 5%;">
+                                metodi di compressione  di audio e video <br>
+                            </div>
+                            <p class="smalTit" >Inoltre<p>
+                                <div style="padding-left: 5%;">
+                                    Per vedere un filmato il player deve supportare:
+                                    <div style="padding-left: 5%;">
+                                        ·Il container <br>
+                                        ·Il codec video  <br>
+                                        ·Il codec audio utilizzati da quel file  <br>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div id="veri" style="display: none;">
+                <div class="argo">TEST</div>
+                <div class="write">
+                    Per Completare il percorso, devi prima rispondere alle domande seguenti:<br><br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">·una pellicola cinematografica è formata da: fotogrammi e bande per il sonoro(SI O NO)?<p></p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">·il video analogico ha una risoluzione espressa in...?<p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">· il video digitale ha una frequenza espressa in...?<p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">·Come si chiama il contenitore che contiene al suo interno audio e video del filmato?<p></p>
+                            <input type="text" class="doma"><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainBtn">
+            <button class="Mbtn" id="back" onclick="back()"><i class="fas fa-chevron-left vaiD"></i></button>
+            <button class="Mbtn" id="for" onclick="forward()"><i class="fas fa-chevron-right vaiA" ></i></button>
+        </div>
+        <div id="Divtest">
+            <button class="Mbtn"  id="test" onclick="chiudiAlertc()" style="display: none; position: absolute; width: 150px; border-radius: 50px; font-size: 15px; top:760px;left:1530px; animation: opa-1 1s forwards;"><i class="fas fa-check-double"> Test</i></button>
+            <button class="Mbtn"  id="finito" onclick="corrego()" style="display: none; position: absolute; width: 150px; border-radius: 50px; font-size: 15px; top:700px;left:1530px; animation: opa-1 1s forwards;"><i class="fas fa-bullseye"></i> Finito</i></button>
+        </div>
+        <div id="contenitore-curved">
+            <div id="svg1">
+                <svg height="410px" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F15F79" fill-opacity="1" d="M0,256L60,240C120,224,240,192,360,202.7C480,213,600,267,720,256C840,245,960,171,1080,165.3C1200,160,1320,224,1380,256L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+            </div>
+         </div>
+    </div>
+    <div id="alert1">
+        <p class="tit-alert">Benvenuto!</p>
+        <p class="para-alert">Gentile, Studente...ti diamo benvenuto nella parte "Video" del nostro percorso!.</p>
+        <input type="button" class="btn-alert" value="Grazie" onclick="chiudiAlert1()">
+    </div>
+    <div id="alert-c" style="visibility: hidden;">
+        <p class="tit-alert">ATTENZIONE!</p>
+        <p class="para-alert">Gentile, Studente...sei sicuro di voler continuare con il test?(NON potrai ritornare indietro)</p>
+        <input type="button" class="btn-alert" id="ok" value="Ok" onclick="ok()">
+        <input type="button" class="btn-alert" id="salta" value="Salta" onclick="salta()">
+    </div>
+    <div id="risultato" style="visibility: hidden;">
+        <p class="tit-alert" >RISULTATO</p>
+        <p class="para-alert" id="livello"></p><br>
+        <p id="ris1"><p>
+        <p id="ris2"><p>
+        <p id="ris3"><p>
+        <p id="ris4"><p>
+        <input type="button" class="btn-alert" id="rifai" value="Rifai" onclick="rifai()">
+        <a class="btn-alert" id="home" href="./../../index.html#" style="text-decoration: none; width: 70px;height: 32px;text-align: center;font-size: 13px;">Home</a>
+    </div>
+    <div id="errore">
+        <p class="tit-alert">Errore</p><br><br>
+        <p class="para-alert">Devi riempire tutti i campi!</p>
+        <input type="button" class="btn-alert" value="Ok" onclick="chiudiErr()">
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

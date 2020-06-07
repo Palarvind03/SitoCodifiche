@@ -1,0 +1,215 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital World | suoni</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto+Condensed&family=Teko:wght@600&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/c8963842c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contenitore">
+        <div id="tit">La Codifica Dei Suoni</div>
+        <div id="contenuto">
+            <div class="page">
+                <div class="argo">Rappresentare I Suoni</div>
+                <div class="write">
+                    Fisicamente un suono è rappresentato come un'onda (onda sonora) che descrive la variazione della pressione dell'aria nel tempo.<br><br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">R. Grafica<p>
+                            Sull'asse delle ascisse viene rappresentato il tempo e sull'asse delle ordinate viene rappresentata la variazione di pressione corrispondente al suono stesso.<br>
+                            Quindi i suoni consistono in vibrazioni che formano un’onda, la cui ampiezza misura l’altezza dell’onda e il periodo è la distanza tra due onde. <br><br>
+                        <p class="smalTIt">L'intensità e La frequenza</p>
+                            L’intensità del suono descrive l’ampiezza delle variazioni dell’onda sonora e si misura in  decibel(DB) <br><br>
+
+                            La frequenza è il numero di periodi (o di vibrazioni) al secondo e si misurano in Hertz(Hz). <br><br>
+                        <p class="smalTIt">Curiosità</p>
+                            L’orecchio umano e’ sensibile alle frequenze tra 20 e 20000Hz...
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Per Fissare Meglio Le idee...</div>
+                <div class="teo">
+                    Clicca il bottone "Muovi" per far muovere l'onda sonora qui sotto:<br><br>
+                    <img src="./img/demo1/grafico1.jpeg"  height="250px" id="grafS" class="img" style="position: absolute;border-radius: 0 15px 0 15px;transform: translateX(550px);animation:opa-1 2s forwards;margin-top: -20px;">
+                    <button onclick="muovi()" class="shbtn" style="margin-top: 290px;margin-left: 750px;">Muovi!</button>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Il Campionamento</div>
+                <div class="write">
+                    <br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">In Generale<p>
+                            per registrare un suono e memorizzarlo sul computer si usa la tecnica del campionamento.<br>
+                            Infatti un file viene prodotto suddividendo un’onda acustica in moltissimi frammenti e memorizzando ogni frammento come un piccolo campione digitale del suono.<br><br>
+
+                            <p class="smalTit">Rapporto fra il campionamento e la precisone<p>
+                                Tanto maggiore è il numero di campioni che vengono presi ogni secondo, tanto maggiore sarà la precisione con cui nel computer sarà rappresentata la forma d’onda.<br>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Per Fissare Meglio Le idee...</div>
+                <div class="teo">
+                    Non hai capito bene la tecnica di campionamento?...non c'è problema, prova questo:<br><br>
+                    <div id="view">
+                        <div id="areaC" style="height: 250px;width: 250px;border-radius: 50%;border: solid 1px #F15F79;position: relative;margin-left: 150px;">
+                            <div class="smalDiv" style="margin-left: 120px;margin-top: 110px;">1</div>
+                            <div class="bigDiv" style="margin-left: 30px;margin-top: 150px;">3</div>
+                            <div class="smalDiv" style="margin-left: 160px;margin-top: 40px;">2</div>
+                            <div class="bigDiv" style="margin-left: 70px;margin-top: 30px;">4</div>
+                            <div class="bigDiv" style="margin-left: 160px;margin-top: 160px;">5</div>
+                        </div>
+                        <div style="position: absolute;margin-top: -200px;">
+                            <div id="areaC2" style="height: 150px;width: 150px;border-radius: 50%;border: solid 1px #F15F79;position: relative;margin-left: 1000px;opacity:0;">
+                                <div class="smalDiv" id="camt1" style="margin-left: 40px;margin-top: 10px;"></div>
+                                <div class="bigDiv" id="camt2" style="margin-left: 80px;margin-top: 60px;"></div>
+                                <div class="smalDiv" id="camt3" style="margin-left: 30px;margin-top: 90px;"></div>
+                            </div>
+                        </div>
+                        <button  onclick="campiona()" class="shbtn" style="margin-top: 100px;margin-left: 650px;">Campiona!</button>
+                        <div id="scan" style="width: 270px;position: absolute;height: 3px;background-color: black;opacity: 0;margin-left: 140px;"></div>
+                        <div id="elmC" style="position: absolute;margin-top: -200px;margin-left: 630px;padding: 10px 14px;opacity: 0;">
+                            <p style="font-size: 15px;">Elementi Campionati:</p>
+                            <div id="elm0" style="text-align:center"></div>
+                            <div id="elm1" style="text-align:center"></div>
+                            <div id="elm2" style="text-align:center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Frequenza Di campionamento</div>
+                <div class="write">
+                    Il numero di campioni registrati al secondo si dice frequenza di campionamento.<br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit" >Frequenza delle schede audio<p><br><br>
+                            <ul style="padding-left: 7%;">
+                                <li>· 11 KHz(11.000 campioni/sec.)</li><br>
+                                <li>· 22 KHz(22.000 campioni/sec.)</li><br>
+                                <li>· 44 KHz(44.000 campioni/sec.)</li><br>
+                            </ul>
+                            <br> Maggiore è il numero di KHz maggiore sarà lo spazio occupato su disco...
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Per Fissare Meglio Le idee...</div>
+                <div class="teo">
+                    E tu quanti campioni vorresti...campionare?<br><br>
+                    <div id="view">
+                        <img src="./img/demo3/cmp1.png" width="500px" id="imgC" style="transform: translateX(490px);animation:opa-1 2s forwards;">
+                        <div style="margin-left: 540px;margin-top: 30px;">
+                            <select id="selC" onchange="cambioimgS()">
+                                <option value="1">Segnale analog</option>
+                                <option value="2">11.000 camp/sec</option>
+                                <option value="3">22.000 camp/sec</option>
+                                <option value="4">44.000 camp/sec</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Dimensione Di Campionamento</div>
+                <div class="write">
+                    Un altrofattore che influenza la qualità del suono è la dimensione di campionamento (quantizzazione),<br>ossia il numero di bit disponibili per memorizzare ciascun campione d’onda.<br><br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">4 Bit     --------->     Si distinguono  16 valori<p><br><br>
+                        <p class="smalTit">8 Bit     --------->     Si distinguono  256 valori<p><br><br>
+                        <p class="smalTit">16 Bit   --------->     Si distinguono  65.536 valori<p><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Quantizzazione e La Codifica</div>
+                <div class="write">
+                    Un dispositivo (detto ADC Analog-Digital converter):<br><br>
+                    <div style="padding-left: 5%;">
+                        trasforma impulsi elettrici (i campioni) in una sequenza di numeri <br><br>
+                        Il numero di bit destinati alla rappresentazione dei valori numerici ripartisce i valori <br> di tensione in un insieme di livelli discreti: <br><br>
+                        <div style="padding-left: 5%;">
+                            Esempio con 8bit (1byte) si distinguono 256 livelli di tensione <br>
+                            Esempio con 16 bit (2byte) si distinguono 65356 livelli di tensione
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="display: none;">
+                <div class="argo">Spazio Occupato</div>
+                <div class="write">
+                    <br>
+                    <div style="padding-left: 5%;">
+                        <br>
+                            <p class="smalTit">Esempio 1<p><br>
+                                <div style="padding-left: 5%;">
+                                    1 secondo di voce umana a 8000 campioni al secondo, campionata a 8 bit richiede<br>64.000bit = ~8KB<br><br>
+                                </div>
+                            <p class="smalTit">Esempio 2<p><br>
+                                <div style="padding-left: 5%;">
+                                    1 secondo di musica qualità CD richiedono (2 canali stereofonia):<br>2 x 44.100 x 16= 1.411.200bit = ~ 175KB<br>1 minuto di musica richiede quindi 10.584.000 = ~10MB <br><br>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div id="veri" style="display: none;">
+                <div class="argo">TEST</div>
+                <div class="write">
+                    Per sbloccare la sezione "Video", devi prima rispondere alle domande seguenti:<br><br>
+                    <div style="padding-left: 5%;">
+                        <p class="smalTit">·Il suono è rappresentato come un onda...?<p></p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">·La frequenza si misura in?<p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">·Tanto maggiore è il numero di campioni, tanto maggiore sarà la...?<p>
+                            <input type="text" class="doma"><br><br>
+                        <p class="smalTit">·"11 KHz" corripondono a qaunti campioni al secondo(in numero)?<p></p>
+                            <input type="text" class="doma"><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainBtn">
+            <button class="Mbtn" id="back" onclick="back()"><i class="fas fa-chevron-left vaiD"></i></button>
+            <button class="Mbtn" id="for" onclick="forward()"><i class="fas fa-chevron-right vaiA" ></i></button>
+        </div>
+        <div id="Divtest">
+            <button class="Mbtn"  id="test" onclick="chiudiAlertc()" style="display: none; position: absolute; width: 150px; border-radius: 50px; font-size: 15px; top:760px;left:1530px; animation: opa-1 1s forwards;"><i class="fas fa-check-double"> Test</i></button>
+            <button class="Mbtn"  id="finito" onclick="corrego()" style="display: none; position: absolute; width: 150px; border-radius: 50px; font-size: 15px; top:700px;left:1530px; animation: opa-1 1s forwards;"><i class="fas fa-bullseye"></i> Finito</i></button>
+        </div>
+        <div id="contenitore-curved">
+            <div id="svg1">
+                <svg height="410px" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F15F79" fill-opacity="1" d="M0,256L60,240C120,224,240,192,360,202.7C480,213,600,267,720,256C840,245,960,171,1080,165.3C1200,160,1320,224,1380,256L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+            </div>
+         </div>
+    </div>
+    <div id="alert1">
+        <p class="tit-alert">Benvenuto!</p>
+        <p class="para-alert">Gentile, Studente...ti diamo benvenuto nella parte "Suoni" del nostro percorso!.</p>
+        <input type="button" class="btn-alert" value="Grazie" onclick="chiudiAlert1()">
+    </div>
+    <div id="alert-c" style="visibility: hidden;">
+        <p class="tit-alert">ATTENZIONE!</p>
+        <p class="para-alert">Gentile, Studente...sei sicuro di voler continuare con il test?(NON potrai ritornare indietro)</p>
+        <input type="button" class="btn-alert" id="ok" value="Ok" onclick="ok()">
+        <input type="button" class="btn-alert" id="salta" value="Salta" onclick="salta()">
+    </div>
+    <div id="risultato" style="visibility: hidden;">
+        <p class="tit-alert" >RISULTATO</p>
+        <p class="para-alert" id="livello"></p><br>
+        <p id="ris1"><p>
+        <p id="ris2"><p>
+        <p id="ris3"><p>
+        <p id="ris4"><p>
+        <input type="button" class="btn-alert" id="rifai" value="Rifai" onclick="rifai()">
+        <a class="btn-alert" id="home" href="./../../index.html#" style="text-decoration: none; width: 70px;height: 32px;text-align: center;font-size: 13px;">Home</a>
+    </div>
+    <div id="errore">
+        <p class="tit-alert">Errore</p><br><br>
+        <p class="para-alert">Devi riempire tutti i campi!</p>
+        <input type="button" class="btn-alert" value="Ok" onclick="chiudiErr()">
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
